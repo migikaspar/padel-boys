@@ -93,14 +93,13 @@ useGsap(root, () => {
     </div>
 
     <!-- Meta-Zeile -->
-    <div class="hero-meta absolute inset-x-0 bottom-0 z-20 mx-auto grid max-w-[1600px] grid-cols-2 items-end gap-4 px-4 pb-6 text-white md:grid-cols-3 md:px-8 md:pb-10">
-      <p class="eyebrow text-white/70">Est. 2023<br /><span class="text-white">{{ venue.city }} · BL</span></p>
-      <p class="hidden text-center md:block">
-        <span class="eyebrow text-white/70">Jeden Dienstag</span><br />
-        <span class="display text-4xl text-pb-lime">18:30 – 20:00</span>
+    <div class="hero-meta absolute inset-x-0 bottom-0 z-20 mx-auto flex max-w-[1600px] items-end justify-between gap-4 px-4 pb-8 text-white md:px-8 md:pb-10">
+      <p class="leading-none">
+        <span class="eyebrow block text-white/70">Jeden Dienstag · {{ venue.name }}</span>
+        <span class="display mt-2 block whitespace-nowrap text-[15vw] text-pb-lime sm:text-7xl md:text-8xl">18:30 – 20:00</span>
       </p>
       <button
-        class="group ml-auto flex items-center gap-3 text-right"
+        class="group mb-2 hidden shrink-0 items-center gap-3 text-right sm:flex"
         aria-label="Zum Team scrollen"
         @click="scrollToSection('#team')"
       >
