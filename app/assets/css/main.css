@@ -1,0 +1,115 @@
+@import 'tailwindcss';
+
+/*
+ * Futura PT Condensed
+ * 1) Adobe Fonts (Typekit) – Projekt jhk5uiw (nuxt.config.ts) → Familie "futura-pt-condensed"
+ * 2) Lokal installierte Schrift ("Futura PT Condensed")
+ * 3) Selbst gehostet: Dateien nach /public/fonts legen und unten per url() ergänzen
+ * Fallback: Barlow Condensed (selbst gehostet via @fontsource, siehe nuxt.config.ts)
+ */
+@font-face {
+  font-family: 'Futura PT Cond Local';
+  src: local('Futura PT Condensed Medium'), local('FuturaPTCond-Medium');
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Futura PT Cond Local';
+  src: local('Futura PT Condensed Bold'), local('FuturaPTCond-Bold');
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Futura PT Cond Local';
+  src: local('Futura PT Condensed Extra Bold'), local('FuturaPTCond-ExtraBold');
+  font-weight: 800;
+  font-display: swap;
+}
+
+/* Desktop mit wenig Höhe (z. B. 1366×768): kompaktere Spielerkarten im horizontalen Pin */
+@custom-variant short (@media (min-width: 1024px) and (max-height: 880px));
+
+@theme {
+  --color-pb-white: #ffffff;
+  --color-pb-black: #101010;
+  --color-pb-navy: #002340;
+  --color-pb-navy-deep: #001629;
+  --color-pb-lime: #daff02;
+  --color-pb-signal: #ff4d3d;
+
+  --font-display: 'futura-pt-condensed', 'Futura PT Cond Local', 'Futura PT Condensed',
+    'Barlow Condensed', 'Arial Narrow', sans-serif;
+  --font-sans: var(--font-display);
+
+  --ease-snap: cubic-bezier(0.7, 0, 0.2, 1);
+}
+
+@layer base {
+  html {
+    background: var(--color-pb-black);
+    color: var(--color-pb-white);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    font-family: var(--font-display);
+    font-weight: 500;
+    background: var(--color-pb-black);
+    overflow-x: hidden;
+  }
+  ::selection {
+    background: var(--color-pb-lime);
+    color: var(--color-pb-black);
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-pb-lime);
+    outline-offset: 3px;
+  }
+}
+
+@layer components {
+  .display {
+    font-family: var(--font-display);
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 0.86;
+    letter-spacing: -0.01em;
+  }
+  .eyebrow {
+    font-family: var(--font-display);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    font-size: 0.8rem;
+  }
+  .text-outline {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1.5px currentColor;
+  }
+  .text-outline-lime {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1.5px var(--color-pb-lime);
+  }
+  .dot-bg {
+    background-image: radial-gradient(currentColor 1.4px, transparent 1.6px);
+    background-size: 22px 22px;
+  }
+  .grain::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.06;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
