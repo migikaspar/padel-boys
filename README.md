@@ -7,8 +7,10 @@ Onepager mit Nuxt 4, Tailwind CSS 4 und GSAP (ScrollTrigger, ScrollSmoother, Spl
 ```bash
 npm install
 npm run dev        # http://localhost:3000
-npm run generate   # statische Seite → .output/public (auf beliebigem Hosting deploybar)
+npm run generate   # statische Seite → .output/public (lokal) bzw. dist (auf Netlify)
 ```
+
+**Netlify:** Konfiguration steht in `netlify.toml` (Build `npm run generate`, Publish `dist`) und hat Vorrang vor den Einstellungen in der Netlify-Oberfläche.
 
 ## Inhalte pflegen
 

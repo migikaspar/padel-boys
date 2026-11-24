@@ -1,0 +1,14 @@
+# Netlify: Nuxt erkennt Netlify automatisch (Preset "netlify-static")
+# und schreibt die statische Seite nach "dist" – nicht nach ".output/public".
+[build]
+  command = "npm run generate"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# Gebündelte Assets (Dateinamen mit Hash) lange cachen
+[[headers]]
+  for = "/_nuxt/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
