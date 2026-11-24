@@ -54,7 +54,7 @@ useGsap(root, () => {
     </div>
     <div class="mx-auto flex max-w-[1600px] flex-wrap justify-between gap-2 border-t border-pb-black/20 py-5 text-sm font-semibold uppercase tracking-wider">
       <span>© {{ year }} Padel Boys</span>
-      <span>Made with Bandejas in Baselland</span>
+      <span>Made with ❤️ in Muttenz, Schweiz</span>
     </div>
   </footer>
 </template>
