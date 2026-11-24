@@ -124,7 +124,7 @@ export const team: Player[] = [
   {
     id: "claude",
     photo: "/players/claude.jpg",
-    photoPosition: "50% 0%",
+    photoPosition: "70% 0%",
     number: 3,
     firstName: "Claude",
     lastName: "Meyer",
