@@ -38,8 +38,8 @@ onBeforeUnmount(() => st?.kill())
     :class="scrolled || open ? 'bg-pb-navy-deep/80 backdrop-blur-xl border-b border-white/10' : 'border-b border-transparent'"
   >
     <div class="mx-auto flex h-16 max-w-[1600px] items-center justify-between px-4 md:h-20 md:px-8">
-      <a href="#top" class="flex items-center gap-3 text-white" @click.prevent="go('#top')">
-        <LogoMark class="h-11 w-11 md:h-14 md:w-14 [&_.pb-ball]:fill-pb-lime" />
+      <a href="#top" class="flex items-center gap-3 text-pb-lime" @click.prevent="go('#top')">
+        <LogoMark class="h-11 w-11 md:h-14 md:w-14" />
         <span class="sr-only">Padel Boys – nach oben</span>
       </a>
 

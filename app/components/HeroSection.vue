@@ -87,7 +87,7 @@ useGsap(root, () => {
 
     <!-- Logo -->
     <div class="hero-logo-wrap relative z-10">
-      <h1 class="hero-logo w-[min(84vw,58vh)] text-white drop-shadow-[0_30px_60px_rgba(0,0,0,.35)] [&_.pb-ball]:fill-pb-lime">
+      <h1 class="hero-logo w-[min(84vw,58vh)] text-pb-lime drop-shadow-[0_30px_60px_rgba(0,0,0,.35)] [&_.pb-ball]:fill-pb-white">
         <LogoMark title="Padel Boys" />
       </h1>
     </div>
