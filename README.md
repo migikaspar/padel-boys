@@ -32,7 +32,7 @@ in der Terminliste und als Ausnahme im `.ics`-Export.
 
 Eingebunden über das Adobe-Fonts-Web-Projekt `jhk5uiw` (in `nuxt.config.ts`, überschreibbar per `NUXT_PUBLIC_TYPEKIT_ID` in `.env`).
 Verwendet werden die Schnitte 400, 500, 700 und 800. Neue Schnitte im Adobe-Projekt hinzufügen – kein Code-Update nötig.
-Damit die Schrift auf eurer Domain lädt, muss die Domain im Adobe-Web-Projekt eingetragen sein.
+Adobe-Web-Projekte sind nicht an Domains gebunden – der Einbettungslink funktioniert auf jeder Domain (lokal wie auf Netlify).
 
 Fallback: **Barlow Condensed**, selbst gehostet über `@fontsource/barlow-condensed` (keine Verbindung zu Google).
 
