@@ -10,7 +10,7 @@ const root = ref<HTMLElement | null>(null)
 
 const links = [
   { href: '#team', label: 'Team' },
-  { href: '#training', label: 'Training' },
+  { href: '#spiele', label: 'Spiele' },
   { href: '#ort', label: 'Ort' },
 ]
 
@@ -58,9 +58,9 @@ onBeforeUnmount(() => st?.kill())
 
       <div class="flex items-center gap-3">
         <a
-          href="#training"
+          href="#spiele"
           class="hidden items-center gap-2 rounded-full bg-pb-lime px-4 py-2 text-sm font-bold uppercase tracking-wider text-pb-black transition-transform hover:scale-[1.03] sm:inline-flex"
-          @click.prevent="go('#training')"
+          @click.prevent="go('#spiele')"
         >
           <span class="relative flex h-2 w-2">
             <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-pb-black/60" />

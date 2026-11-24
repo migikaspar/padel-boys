@@ -97,7 +97,7 @@ useGsap(root, () => {
 </script>
 
 <template>
-  <section id="training" ref="root" class="relative overflow-hidden bg-pb-navy px-4 py-28 md:px-8 md:py-40">
+  <section id="spiele" ref="root" class="relative overflow-hidden bg-pb-navy px-4 py-28 md:px-8 md:py-40">
     <div
       class="sched-bgnum display text-outline pointer-events-none absolute -right-[4vw] top-10 select-none text-[38vw] leading-none text-white/[0.05]"
       aria-hidden="true"
@@ -138,7 +138,7 @@ useGsap(root, () => {
               <p class="display text-5xl tabular-nums md:text-7xl">
                 <ClientOnly fallback="--">{{ pad2(c.v) }}</ClientOnly>
               </p>
-              <p class="eyebrow mt-1 text-[0.65rem]">{{ c.l }}</p>
+              <p class="eyebrow mt-1">{{ c.l }}</p>
             </div>
           </div>
 
@@ -175,7 +175,7 @@ useGsap(root, () => {
             <div
               v-for="w in weekdays"
               :key="w"
-              class="eyebrow pb-2 text-center text-[0.7rem]"
+              class="eyebrow pb-2 text-center text-xs"
               :class="w === 'Di' ? 'text-pb-lime' : 'text-white/40'"
             >
               {{ w }}
@@ -194,11 +194,11 @@ useGsap(root, () => {
                 mounted && c.key === todayKey && 'ring-2 ring-white ring-offset-2 ring-offset-pb-navy',
                 c.training && selected.key === c.key && 'outline outline-2 outline-offset-2 outline-pb-lime',
               ]"
-              :aria-label="c.training ? `${fmtLong(c.d)}${c.training.cancelled ? ', fällt aus: ' + c.training.cancelled : ', Training 18:30'}` : undefined"
+              :aria-label="c.training ? `${fmtLong(c.d)}${c.training.cancelled ? ', fällt aus: ' + c.training.cancelled : ', Spiel 18:30'}` : undefined"
               @click="c.training && (selectedKey = c.key)"
             >
               <span class="display">{{ c.d.getDate() }}</span>
-              <span v-if="c.training && !c.training.cancelled" class="hidden text-[0.6rem] font-bold uppercase tracking-wider md:block">18:30</span>
+              <span v-if="c.training && !c.training.cancelled" class="hidden text-xs font-bold uppercase tracking-wider md:block">18:30</span>
             </component>
           </div>
 
@@ -225,7 +225,7 @@ useGsap(root, () => {
           </div>
 
           <div class="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-sm uppercase tracking-wider text-white/50">
-            <span class="flex items-center gap-2"><span class="h-3 w-3 rounded bg-pb-lime" /> Training</span>
+            <span class="flex items-center gap-2"><span class="h-3 w-3 rounded bg-pb-lime" /> Spiel</span>
             <span class="flex items-center gap-2"><span class="h-3 w-3 rounded bg-white/15" /> Gespielt</span>
             <span class="flex items-center gap-2"><span class="h-3 w-3 rounded bg-pb-signal/50" /> Fällt aus</span>
             <span class="flex items-center gap-2"><span class="h-3 w-3 rounded ring-2 ring-white" /> Heute</span>
@@ -242,7 +242,7 @@ useGsap(root, () => {
               class="group relative overflow-hidden rounded-2xl border p-5 transition"
               :class="s.cancelled ? 'border-pb-signal/30 bg-pb-signal/5' : i === 0 ? 'border-pb-lime bg-pb-lime/10' : 'border-white/10 hover:border-white/30'"
             >
-              <p class="eyebrow text-[0.7rem]" :class="s.cancelled ? 'text-pb-signal' : 'text-pb-lime'">
+              <p class="eyebrow" :class="s.cancelled ? 'text-pb-signal' : 'text-pb-lime'">
                 {{ s.cancelled ? 'Fällt aus' : i === 0 ? 'Next up' : `In ${Math.round((s.start.getTime() - upcoming[0]!.start.getTime()) / 604800000)} Wo.` }}
               </p>
               <p class="display mt-2 text-4xl" :class="s.cancelled ? 'text-white/40 line-through' : 'text-white'">

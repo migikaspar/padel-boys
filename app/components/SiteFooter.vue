@@ -31,7 +31,7 @@ useGsap(root, () => {
       </div>
       <div class="grid grid-cols-2 gap-8 md:col-span-8 md:grid-cols-3">
         <div>
-          <p class="eyebrow mb-3 opacity-60">Training</p>
+          <p class="eyebrow mb-3 opacity-60">Spiele</p>
           <p class="text-xl font-semibold leading-snug">Jeden Dienstag<br />18:30 – 20:00</p>
         </div>
         <div>
@@ -42,7 +42,7 @@ useGsap(root, () => {
           <p class="eyebrow mb-3 opacity-60">Navigation</p>
           <ul class="space-y-1 text-xl font-semibold">
             <li><a href="#team" class="hover:underline" @click.prevent="scrollToSection('#team')">Team</a></li>
-            <li><a href="#training" class="hover:underline" @click.prevent="scrollToSection('#training')">Training</a></li>
+            <li><a href="#spiele" class="hover:underline" @click.prevent="scrollToSection('#spiele')">Spiele</a></li>
             <li><a href="#ort" class="hover:underline" @click.prevent="scrollToSection('#ort')">Ort</a></li>
           </ul>
         </div>

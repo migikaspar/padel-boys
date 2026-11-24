@@ -93,9 +93,9 @@ useGsap(root, () => {
     </div>
 
     <!-- Meta-Zeile -->
-    <div class="hero-meta absolute inset-x-0 bottom-0 z-20 mx-auto flex max-w-[1600px] items-end justify-between gap-4 px-4 pb-8 text-white md:px-8 md:pb-10">
+    <div class="hero-meta absolute inset-x-0 bottom-0 z-20 mx-auto flex max-w-[1600px] items-end justify-between gap-4 px-4 pb-20 text-white md:px-8 md:pb-24">
       <p class="leading-none">
-        <span class="eyebrow block text-white/70">Jeden Dienstag · {{ venue.name }}</span>
+        <span class="eyebrow block text-white/80">Jeden Dienstag · {{ venue.name }}</span>
         <span class="display mt-2 block whitespace-nowrap text-[15vw] text-pb-lime sm:text-7xl md:text-8xl">18:30 – 20:00</span>
       </p>
       <button

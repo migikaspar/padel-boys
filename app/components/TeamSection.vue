@@ -104,7 +104,7 @@ useGsap(root, () => {
             <span class="block overflow-hidden"><span class="team-title-line block">The</span></span>
             <span class="block overflow-hidden"><span class="team-title-line block text-pb-lime">Squad</span></span>
           </h2>
-          <p class="mt-6 max-w-md text-xl leading-snug text-white/70">
+          <p class="mt-6 max-w-lg text-2xl leading-snug text-white/75 xl:text-3xl">
             Drive oder Revés, Power oder Köpfchen – jeder bringt etwas anderes auf den Court. Hier sind die Werte, ganz objektiv
             von uns selbst bewertet.
           </p>

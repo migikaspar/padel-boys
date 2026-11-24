@@ -88,7 +88,7 @@ function onLeave() {
             :class="injured ? 'bg-white/15 text-white' : 'bg-pb-lime text-pb-black'"
           >
             <span class="display text-3xl leading-none">{{ ovr }}</span>
-            <span class="text-[0.6rem] font-bold uppercase tracking-widest">OVR</span>
+            <span class="text-xs font-bold uppercase tracking-widest">OVR</span>
           </div>
         </div>
 

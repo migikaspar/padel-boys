@@ -53,12 +53,16 @@ useGsap(root, () => {
 
 <template>
   <section ref="root" class="relative overflow-hidden bg-pb-black px-4 pb-28 pt-40 md:px-8 md:pb-40 md:pt-56">
-    <div class="intro-ball pointer-events-none absolute -right-20 top-1/3 h-64 w-64 rounded-full bg-pb-lime/90 blur-[2px] md:h-96 md:w-96" aria-hidden="true">
-      <svg viewBox="0 0 100 100" class="h-full w-full text-pb-black/25" fill="none" stroke="currentColor" stroke-width="2.5">
-        <path d="M18 14 C 45 30, 45 70, 18 86" />
-        <path d="M82 14 C 55 30, 55 70, 82 86" />
-      </svg>
-    </div>
+    <!-- Ball aus dem Logo -->
+    <svg
+      class="intro-ball pointer-events-none absolute -right-16 top-1/3 h-64 w-64 text-pb-lime md:-right-20 md:h-96 md:w-96"
+      viewBox="181.5 107.5 33 35"
+      fill="currentColor"
+      aria-hidden="true"
+    >
+      <path d="M198.05,135.09c-2.84,2.14-5.53,1.7-7.5.72-1.85-.91-3.31-2.5-4.39-4.37-1.56-2.69-1.94-5.44-1.83-7.79.16-3.35,1.39-6.54,3.43-9.06,4.2-5.19,9.12-5.78,9.99-5.84-.16,0-.31,0-.46,0-8.34,0-15.09,7.18-15.09,16.05s6.75,16.05,15.09,16.05,14.46-6.53,15.04-14.83h0C210.57,119.96,203.73,130.81,198.05,135.09Z" />
+      <path d="M200.4,108.91s-7.48.85-11.58,8.14c-1.51,2.68-2.07,5.66-1.51,8.77.32,1.81,1.06,3.79,2.56,5.56,0,0,4.75,5.76,10.25-.46,5.94-6.72,10.6-11.32,12.26-6.76C212.38,116.41,207.17,110,200.4,108.91Z" />
+    </svg>
     <div class="relative mx-auto max-w-[1600px]">
       <p class="eyebrow mb-8 text-pb-lime">Wer wir sind</p>
       <p class="intro-text display max-w-6xl text-[13vw] leading-[0.92] text-white md:text-[7.2vw] xl:text-[7rem]">
