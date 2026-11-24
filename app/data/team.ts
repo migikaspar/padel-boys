@@ -3,7 +3,7 @@
  * ----------
  * Hier pflegt ihr Spieler, Werte und Verletzungen.
  * - Fotos: Datei nach /public/players/ legen und `photo: '/players/name.jpg'` setzen
- *   (Hochformat 4:5, ca. 1080×1350 px, JPG ~200–400 KB). Originale liegen in /assets-src/players.
+ *   (Hochformat 4:5, ca. 1080×1350 px, JPG ~200–400 KB).
  *   `photoPosition` legt fest, welcher Bildteil im breiteren Desktop-Kartenformat sichtbar bleibt.
  *   Ohne Foto wird ein Platzhalter gezeigt.
  * - Werte: 0–100
