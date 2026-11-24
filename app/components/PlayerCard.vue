@@ -65,8 +65,12 @@ function onLeave() {
           :src="player.photo"
           :alt="`${player.firstName} ${player.lastName}`"
           class="player-photo absolute inset-0 h-full w-full object-cover transition-[filter,transform] duration-700 group-hover:scale-[1.04]"
-          :class="injured && 'grayscale'"
+          :class="injured ? 'grayscale' : 'saturate-[.85] group-hover:saturate-100'"
+          :style="{ objectPosition: player.photoPosition ?? '50% 20%' }"
+          width="1080"
+          height="1350"
           loading="lazy"
+          decoding="async"
         />
         <div v-else class="player-photo absolute inset-0" :class="injured && 'grayscale'">
           <div class="dot-bg absolute inset-0 text-white/[0.09]" />
@@ -82,22 +86,18 @@ function onLeave() {
 
         <!-- Top-Leiste -->
         <div class="absolute inset-x-0 top-0 flex items-start justify-between p-5">
-          <span class="display text-3xl text-white">#{{ String(player.number).padStart(2, '0') }}</span>
-          <div
-            class="flex h-16 w-16 flex-col items-center justify-center rounded-full"
-            :class="injured ? 'bg-white/15 text-white' : 'bg-pb-lime text-pb-black'"
-          >
+          <span class="display text-3xl text-white drop-shadow-[0_2px_8px_rgba(0,0,0,.5)]">#{{ String(player.number).padStart(2, '0') }}</span>
+          <div v-if="!injury" class="flex h-16 w-16 flex-col items-center justify-center rounded-full bg-pb-lime text-pb-black">
             <span class="display text-3xl leading-none">{{ ovr }}</span>
             <span class="text-xs font-bold uppercase tracking-widest">OVR</span>
           </div>
         </div>
 
-        <!-- Verletzt-Band -->
-        <div
-          v-if="injury"
-          class="absolute left-[-30%] top-[38%] lg:top-[33%] short:top-[40%] w-[160%] -rotate-6 bg-pb-signal py-2 short:py-0.5 text-center shadow-2xl"
-        >
-          <span class="display text-2xl tracking-wide text-white short:text-lg">Verletzt · Out · Verletzt · Out · Verletzt</span>
+        <!-- Verletzt: Schärpe in der Ecke (lässt das Gesicht frei) -->
+        <div v-if="injury" class="pointer-events-none absolute right-0 top-0 h-36 w-36 overflow-hidden">
+          <div class="absolute right-[-52px] top-[30px] w-[200px] rotate-45 bg-pb-signal py-1.5 text-center shadow-xl">
+            <span class="display text-xl tracking-wide text-white">Out</span>
+          </div>
         </div>
 
         <!-- Name -->

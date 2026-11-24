@@ -18,7 +18,7 @@ npm run generate   # statische Seite → .output/public (lokal) bzw. dist (auf N
 | --- | --- |
 | Spieler, Werte, Hand, Seite, Verletzungen | `app/data/team.ts` |
 | Trainingszeit, Ort, Ausfälle (Ferien etc.) | `app/data/schedule.ts` |
-| Spielerfotos | `public/players/` + `photo: '/players/name.jpg'` in `team.ts` (Hochformat 4:5) |
+| Spielerfotos | `public/players/` (Web-Version, 1080×1350) + `photo`/`photoPosition` in `team.ts`; Originale in `assets-src/players/` |
 
 **Verletzung eintragen:** beim Spieler `injury: { type: 'Zerrung Wade', since: '2026-11-10', until: '2027-01-12' }` setzen.
 Ist das `until`-Datum vorbei, gilt der Spieler automatisch wieder als fit. Die Verfügbarkeit im Kalender passt sich mit an.

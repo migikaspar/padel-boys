@@ -3,11 +3,11 @@
  * ----------
  * Hier pflegt ihr Spieler, Werte und Verletzungen.
  * - Fotos: Datei nach /public/players/ legen und `photo: '/players/name.jpg'` setzen
- *   (Hochformat, ideal 4:5, z. B. 1200×1500 px). Ohne Foto wird ein Platzhalter gezeigt.
+ *   (Hochformat 4:5, ca. 1080×1350 px, JPG ~200–400 KB). Originale liegen in /assets-src/players.
+ *   `photoPosition` legt fest, welcher Bildteil im breiteren Desktop-Kartenformat sichtbar bleibt.
+ *   Ohne Foto wird ein Platzhalter gezeigt.
  * - Werte: 0–100
  * - Verletzung: `injury` setzen, bei Genesung einfach entfernen (oder `until` in der Vergangenheit).
- *
- * Die Namen unten sind Platzhalter – bitte durch eure echten Daten ersetzen.
  */
 
 export type Hand = "rechts" | "links";
@@ -37,6 +37,8 @@ export interface Player {
   lastName: string;
   nickname: string;
   photo?: string;
+  /** Bildausschnitt (CSS object-position), z. B. "50% 20%" – damit das Gesicht im Kartenformat sichtbar bleibt */
+  photoPosition?: string;
   hand: Hand;
   side: Side;
   signatureShot: string;
@@ -56,6 +58,8 @@ export const statLabels: Record<keyof PlayerStats, string> = {
 export const team: Player[] = [
   {
     id: "roman",
+    photo: "/players/roman.jpg",
+    photoPosition: "50% 0%",
     number: 1,
     firstName: "Roman",
     lastName: "Kämpfer",
@@ -74,6 +78,8 @@ export const team: Player[] = [
   },
   {
     id: "matthias",
+    photo: "/players/matthias.jpg",
+    photoPosition: "50% 22%",
     number: 2,
     firstName: "Matthias",
     lastName: "Hofer",
@@ -92,6 +98,8 @@ export const team: Player[] = [
   },
   {
     id: "miša",
+    photo: "/players/misa.jpg",
+    photoPosition: "50% 15%",
     number: 5,
     firstName: "Miša",
     lastName: "Kaspar",
@@ -115,6 +123,8 @@ export const team: Player[] = [
   },
   {
     id: "claude",
+    photo: "/players/claude.jpg",
+    photoPosition: "50% 0%",
     number: 3,
     firstName: "Claude",
     lastName: "Meyer",
@@ -133,6 +143,8 @@ export const team: Player[] = [
   },
   {
     id: "patrick",
+    photo: "/players/patrick.jpg",
+    photoPosition: "50% 14%",
     number: 4,
     firstName: "Patrick",
     lastName: "Belser",
