@@ -60,7 +60,7 @@ useGsap(root, () => {
       width="848"
       height="814"
       loading="lazy"
-      class="intro-ball pointer-events-none absolute -right-20 top-1/3 h-auto w-72 md:-right-24 md:w-[30rem]"
+      class="intro-ball pointer-events-none absolute -right-20 top-1/3 h-auto w-72 brightness-[.55] md:-right-24 md:brightness-100 md:w-[30rem]"
     />
     <div class="relative mx-auto max-w-[1600px]">
       <p class="eyebrow mb-8 text-pb-lime">Wer wir sind</p>
