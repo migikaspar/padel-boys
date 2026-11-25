@@ -103,7 +103,7 @@ function onLeave() {
         <!-- Name -->
         <div class="absolute inset-x-0 bottom-0 p-5">
           <p class="eyebrow inline-block rounded-full bg-pb-black/55 px-3 py-1 text-pb-lime backdrop-blur-md">„{{ player.nickname }}“</p>
-          <h3 class="display mt-2text-4xl text-white xl:text-5xl short:text-3xl">
+          <h3 class="display mt-2 text-4xl text-white xl:text-5xl short:text-3xl">
             {{ player.firstName }}<br /><span class="text-white/60">{{ player.lastName }}</span>
           </h3>
         </div>
